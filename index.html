@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url(r2.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgba(85, 85, 85, 0.8);
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin: 2px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .qr-button {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .qr-button:hover {
+            background-color: #218838;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: rgba(51, 51, 51, 0.9);
+            color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        #menu ul li {
+            cursor: pointer;
+        }
+
+        #menu ul li:hover::after {
+            content: " (Click to Explore)";
+            color: #bbb;
+            font-size: 0.9em;
+        }
+
+        .reservation-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .reservation {
+            width: 48%;
+        }
+
+        .map {
+            width: 48%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        form select, form textarea, form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #218838;
+        }
+        
+        .table-preference {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .table-button {
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 8px 16px;
+            border: 2px solid #333;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.9em;
+            width: auto;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .table-button:hover {
+            background-color: #333;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .table-button:active {
+            transform: scale(0.95);
+        }
+
+        .contact-button {
+            background-color: rgba(85, 85, 85, 0.8);
+            color: #fff;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 2px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Restaurant</h1>
+        <a href="QR Code.html" class="qr-button" target="_blank">QR Code</a>
+    </header>
+    <nav>
+        <a href="Restaurant-Home.html">Home</a>
+        <a href="Menu.html">Our Menu</a>
+        <a href="#reservation">Reservations</a>
+        <a href="Contact.html" class="contact-button">Contact Us</a>
+    </nav>
+    <div class="container">
+        <div class="content" id="home">
+            <h2>Welcome to Our Restaurant</h2>
+            <p>Experience the finest dining with our exquisite menu and cozy ambiance.</p>
+        </div>
+        <div class="content" id="menu">
+            <h2>Our Menu</h2>
+            <p>Explore our diverse range of dishes made with the freshest ingredients.</p>
+            <ul>
+                <li>Appetizers</li>
+                <li>Main Courses</li>
+                <li>Desserts</li>
+                <li>Drinks</li>
+            </ul>
+        </div>
+        <div class="content" id="reservation">
+            <div class="reservation-container">
+                <div class="reservation">
+                    <h2>Reservations</h2>
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="time">Time:</label>
+                        <select id="time" name="time" required>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="12:30 PM">12:30 PM</option>
+                            <option value="1:00 PM">1:00 PM</option>
+                            <option value="1:30 PM">1:30 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                        </select>
+
+                        <label for="table">Table Preference:</label>
+                        <div id="table" class="table-preference">
+                            <button type="button" class="table-button" value="window">Window Table</button>
+                            <button type="button" class="table-button" value="upstairs">Upstairs Table</button>
+                            <button type="button" class="table-button" value="terrace">Terrace Table</button>
+                            <button type="button" class="table-button" value="inside">Inside Table</button>
+                            <button type="button" class="table-button" value="stove">Close to the Stove</button>
+                        </div>
+
+                        <button type="submit">Book Now</button>
+                    </form>
+                </div>
+                <div class="map">
+                    <h2>Our Location</h2>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.213839884049!2d21.160049515485004!3d42.66291327916852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ecde4df473f%3A0x4b5f1d6b3ea86d22!2sPristina!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Restaurant. All rights reserved.</p>
+    </footer>
+</body>
+</html>
