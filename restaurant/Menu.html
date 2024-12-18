@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ddd;
+        }
+
+        .banner {
+            background: url('background1.jpg') no-repeat center center/cover;
+            height: 300px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .menu-section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .menu-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .menu-category {
+            width: 30%;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        .menu-category img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .menu-category h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Restaurant-Home.html">Home</a>
+            <a href="javascript:void(0)" id="menuButton">Menu</a> 
+            <a href="Contact.html">Contact</a>
+            <a href="index.html#reservation">Reservations</a>
+        </nav>
+    </header>
+    
+    <div class="banner">
+        <h1>Our Delicious Menu</h1>
+    </div>
+
+    <div class="menu-section" id="menuSection">
+        <div class="menu-row">
+            <div class="menu-category">
+                <h2>Appetizers</h2>
+                <img src="appetizer1.jpg" alt="Appetizer">
+            </div>
+            <div class="menu-category">
+                <h2>Breakfast</h2>
+                <img src="appetizer2.jpg" alt="Breakfast">
+            </div>
+            <div class="menu-category">
+                <h2>Soup</h2>
+                <img src="appetizer3.jpg" alt="Soup">
+            </div>
+        </div>
+
+        <div class="menu-row">
+            <div class="menu-category">
+                <h2>Beef</h2>
+                <img src="/mnt/data/image.png" alt="Beef">
+            </div>
+            <div class="menu-category">
+                <h2>Chicken</h2>
+                <img src="chicken.jpg" alt="Chicken">
+            </div>
+            <div class="menu-category">
+                <h2>Fish</h2>
+                <img src="/mnt/data/image.png" alt="Fish">
+            </div>
+        </div>
+
+        <div class="menu-row">
+            <div class="menu-category">
+                <h2>Salad</h2>
+                <img src="salad.jpg" alt="Salad">
+            </div>
+            <div class="menu-category">
+                <h2>Pasta</h2>
+                <img src="pasta.jpg" alt="Pasta">
+            </div>
+            <div class="menu-category">
+                <h2>Risotto</h2>
+                <img src="risotto.jpg" alt="Risotto">
+            </div>
+        </div>
+
+        <div class="menu-row">
+            <div class="menu-category">
+                <h2>Burgers</h2>
+                <img src="/mnt/data/image.png" alt="Burger">
+            </div>
+            <div class="menu-category">
+                <h2>Pizzas</h2>
+                <img src="pizza.jpg" alt="Pizza">
+            </div>
+            <div class="menu-category">
+                <h2>Sandwich</h2>
+                <img src="sandwich.jpg" alt="Sandwich">
+            </div>
+        </div>
+
+        <div class="menu-row">
+            <div class="menu-category">
+                <h2>Coffee</h2>
+                <img src="coffee.jpg" alt="Coffee">
+            </div>
+            <div class="menu-category">
+                <h2>Desserts</h2>
+                <img src="dessert.jpg" alt="Dessert">
+            </div>
+            <div class="menu-category">
+                <h2>Drinks</h2>
+                <img src="drinks.jpg" alt="Drinks">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Restaurant. Visit our <a href="contact.html">Contact Page</a> for more information.</p>
+    </footer>
+
+    <script>
+        document.getElementById("menuButton").addEventListener("click", function() {
+            const menuSection = document.getElementById("menuSection"); 
+            menuSection.scrollIntoView({
+                behavior: "smooth" 
+            });
+        });
+    </script>
+</body>
+</html>

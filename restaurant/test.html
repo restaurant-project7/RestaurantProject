@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bg2.jpg') no-repeat center center/cover; /* Add background image */
+            background-size: cover;
+            color: #333;
+        }
+        
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #4b4b4b;
+            color: white;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #333;
+        }
+        
+        .contact-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(192, 192, 192, 0.8); /* Slight transparency */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        h1 {
+            color: #222;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info div {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid gold;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .contact-info div h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        
+        .contact-info div p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        
+        .buttons a {
+            padding: 15px 25px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #4b4b4b; 
+            border: none;
+            border-radius: 20px; 
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            width: 200px; 
+            text-align: center;
+        }
+        
+        .buttons a:hover {
+            transform: scale(1.1);
+            background-color: #333; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Left Arrow Button -->
+    <button class="back-button" onclick="window.location.href='Restaurant2.html'">
+        ←
+    </button>
+
+    <div class="contact-container">
+        <header>
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Reach out to us with any questions or reservations.</p>
+        </header>
+        <div class="contact-info">
+            <div>
+                <h2>Phone</h2>
+                <p>(+383) 49-272-731</p>
+            </div>
+            <div>
+                <h2>Email</h2>
+                <p>oltbexhetii@gmail.com</p>
+            </div>
+            <div>
+                <h2>Address</h2>
+                <p>123 Food Street, Gourmet City, FL 56789</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="Restaurant2.html#reservation">Make Your Reservation Now</a>
+            <a href="Menu.html">Order Your Food Now</a>
+        </div>
+    </div>
+</body>
+</html>
